@@ -1,1 +1,10 @@
-<p>create-product works!</p>
+<section class="container">
+  <h1>
+    Create Product
+    <button mat-raised-button color="primary" [routerLink]="['/warehouse']" class="float-end" >
+      To Warehouse list
+    </button>
+  </h1>
+  <hr>
+  <app-product-form (submit)="send($event)"></app-product-form>
+</section>

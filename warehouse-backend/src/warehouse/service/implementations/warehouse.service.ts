@@ -47,7 +47,7 @@ export class WarehouseService implements IWarehouseService {
 
   async removeProduct(product_id: string, warehouse_id: string): Promise<void> {
     const warehouse = await this.findOne(warehouse_id)
-    warehouse.set("products" , warehouse.products.filter(p => p._id.toString() === product_id))
+    warehouse.set("products" , warehouse.products.filter(p => p._id.toString() !== product_id))
     await warehouse.save()
   }
 

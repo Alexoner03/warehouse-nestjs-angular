@@ -2,7 +2,10 @@
   <h1>
     Warehouse Detail: <span *ngIf="warehouse !== null">{{warehouse?.name}}</span>
     <button mat-raised-button color="primary" [routerLink]="['/warehouse/products/create']" class="float-end" >
-      Agregar Producto
+      Add Product
+    </button>
+    <button mat-raised-button color="primary" [routerLink]="['/warehouse']" class="float-end mr-2" >
+      To Warehouse List
     </button>
   </h1>
   <hr>

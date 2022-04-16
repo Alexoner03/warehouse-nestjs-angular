@@ -63,3 +63,8 @@ a:active {
 .float-end {
   float: right;
 }
+
+.form-field{
+  display: block;
+  width: 100%;
+}

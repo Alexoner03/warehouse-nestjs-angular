@@ -1,0 +1,37 @@
+<form action="" [formGroup]="productForm" (submit)="send($event)">
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> Name </mat-label>
+    <input matInput formControlName="name" required>
+    <mat-error *ngIf="productForm.get('name')?.touched && productForm.get('name')?.invalid">
+      <span *ngIf="productForm.get('name')?.errors?.['required']">This field is mandatory.</span>
+      <span *ngIf="productForm.get('name')?.errors?.['minlength']">Min length is 3.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> Quantity </mat-label>
+    <input matInput formControlName="quantity" required type="number">
+    <mat-error *ngIf="productForm.get('quantity')?.touched && productForm.get('quantity')?.invalid">
+      <span *ngIf="productForm.get('quantity')?.errors?.['required']">This field is mandatory.</span>
+      <span *ngIf="productForm.get('quantity')?.errors?.['min']">Min value is 1.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>warehouse</mat-label>
+    <mat-select formControlName="warehouse" required>
+      <mat-option *ngFor="let wh of warehouses" [value]="wh._id">
+        {{wh.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="productForm.get('warehouse')?.touched && productForm.get('warehouse')?.invalid">
+      <span *ngIf="productForm.get('warehouse')?.errors?.['required']">This field is mandatory.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="primary" [disabled]="productForm.invalid">Guardar</button>
+  </div>
+
+</form>

@@ -8,6 +8,8 @@ import {AppRoutingModule} from "../app-routing.module";
 import { EditWarehouseComponent } from './pages/edit-warehouse/edit-warehouse.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -18,12 +20,14 @@ import { ProductsTableComponent } from './components/products-table/products-tab
     ProductsComponent,
     EditWarehouseComponent,
     CreateProductComponent,
-    ProductsTableComponent
+    ProductsTableComponent,
+    ProductFormComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ]
 })
 export class WarehouseModule { }
