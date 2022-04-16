@@ -8,7 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="warehose-backend" />
+    <orderEntry type="module" module-name="warehouse-backend" />
     <orderEntry type="module" module-name="warehouse-frontend" />
   </component>
 </module>

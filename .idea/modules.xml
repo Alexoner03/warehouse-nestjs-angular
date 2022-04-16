@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Agenda.iml" filepath="$PROJECT_DIR$/.idea/Agenda.iml" />
-      <module fileurl="file://$PROJECT_DIR$/warehose-backend/.idea/warehose-backend.iml" filepath="$PROJECT_DIR$/warehose-backend/.idea/warehose-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/warehouse-backend/.idea/warehouse-backend.iml" filepath="$PROJECT_DIR$/warehouse-backend/.idea/warehouse-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/warehouse-frontend/.idea/warehouse-frontend.iml" filepath="$PROJECT_DIR$/warehouse-frontend/.idea/warehouse-frontend.iml" />
     </modules>
   </component>
