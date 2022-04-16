@@ -4,6 +4,7 @@ import {IndexComponent} from "./warehouse/pages/index/index.component";
 import {ProductsComponent} from "./warehouse/pages/products/products.component";
 import {EditWarehouseComponent} from "./warehouse/pages/edit-warehouse/edit-warehouse.component";
 import {CreateProductComponent} from "./warehouse/pages/create-product/create-product.component";
+import {CreateWarehouseComponent} from "./warehouse/pages/create-warehouse/create-warehouse.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
         path : "",
         pathMatch : "full",
         component : IndexComponent
+      },
+      {
+        path: "create",
+        component: CreateWarehouseComponent
       },
       {
         path: "products/create",

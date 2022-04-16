@@ -10,6 +10,8 @@ import { CreateProductComponent } from './pages/create-product/create-product.co
 import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import {SharedModule} from "../shared/shared.module";
+import { CreateWarehouseComponent } from './pages/create-warehouse/create-warehouse.component';
+import { WarehouseFormComponent } from './components/warehouse-form/warehouse-form.component';
 
 
 
@@ -21,7 +23,9 @@ import {SharedModule} from "../shared/shared.module";
     EditWarehouseComponent,
     CreateProductComponent,
     ProductsTableComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    CreateWarehouseComponent,
+    WarehouseFormComponent
   ],
   imports: [
     CommonModule,

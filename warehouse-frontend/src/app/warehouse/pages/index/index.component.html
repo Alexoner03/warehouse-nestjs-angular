@@ -1,5 +1,10 @@
 <section class="container">
-  <h1>Warehouses List</h1>
+  <h1>
+    Warehouses List
+    <button mat-raised-button color="primary" [routerLink]="['/warehouse/create']" class="float-end" >
+      add Warehouse
+    </button>
+  </h1>
   <hr>
 
   <app-warehouses-table [warehouses]="warehouses"></app-warehouses-table>

@@ -1,0 +1,25 @@
+<form action="" [formGroup]="warehouseForm" (submit)="send($event)">
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> Name </mat-label>
+    <input matInput formControlName="name" required>
+    <mat-error *ngIf="warehouseForm.get('name')?.touched && warehouseForm.get('name')?.invalid">
+      <span *ngIf="warehouseForm.get('name')?.errors?.['required']">This field is mandatory.</span>
+      <span *ngIf="warehouseForm.get('name')?.errors?.['minlength']">Min length is 3.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label> Address </mat-label>
+    <input matInput formControlName="address" required>
+    <mat-error *ngIf="warehouseForm.get('address')?.touched && warehouseForm.get('address')?.invalid">
+      <span *ngIf="warehouseForm.get('address')?.errors?.['required']">This field is mandatory.</span>
+      <span *ngIf="warehouseForm.get('address')?.errors?.['minlength']">Min value is 3.</span>
+    </mat-error>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="primary" [disabled]="warehouseForm.invalid">Guardar</button>
+  </div>
+
+</form>
