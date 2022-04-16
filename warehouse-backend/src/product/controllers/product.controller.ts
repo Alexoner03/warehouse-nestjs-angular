@@ -32,7 +32,7 @@ export class ProductController {
     return this.productService.update(id, updateProductDto);
   }
 
-  @Delete(':id/warehoude/:warehouseid')
+  @Delete(':id/warehouse/:warehouseid')
   delete(
       @Param('id',MongoIdPipe) id: string,
       @Param('warehouseid',MongoIdPipe) warehouseId: string,

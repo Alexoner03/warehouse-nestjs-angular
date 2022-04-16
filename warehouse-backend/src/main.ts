@@ -10,6 +10,7 @@ async function bootstrap() {
     whitelist : true
   }))
   app.useGlobalFilters(new MongooseValidationError())
+  app.enableCors()
   await app.listen(3000);
 }
 bootstrap();

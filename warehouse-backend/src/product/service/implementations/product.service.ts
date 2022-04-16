@@ -48,7 +48,7 @@ export class ProductService implements IProductService {
   }
 
   async remove(id: string, warehouse_id: string): Promise<void> {
-    await this.productModel.findByIdAndDelete(id,{new : true}).exec();
+    await this.productModel.findByIdAndDelete(id).exec();
     await this.wareHouseService.removeProduct(id, warehouse_id)
   }
 
