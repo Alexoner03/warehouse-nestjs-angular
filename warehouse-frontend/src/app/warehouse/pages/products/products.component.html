@@ -1,1 +1,10 @@
-<p>products works!</p>
+<section class="container">
+  <h1>
+    Warehouse Detail: <span *ngIf="warehouse !== null">{{warehouse?.name}}</span>
+    <button mat-raised-button color="primary" [routerLink]="['/warehouse/products/create']" class="float-end" >
+      Agregar Producto
+    </button>
+  </h1>
+  <hr>
+  <app-products-table [product]="products" (onDelete)="delete($event)"></app-products-table>
+</section>

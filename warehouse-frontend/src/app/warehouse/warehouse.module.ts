@@ -7,6 +7,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import {AppRoutingModule} from "../app-routing.module";
 import { EditWarehouseComponent } from './pages/edit-warehouse/edit-warehouse.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
+import { ProductsTableComponent } from './components/products-table/products-table.component';
 
 
 
@@ -16,7 +17,8 @@ import { CreateProductComponent } from './pages/create-product/create-product.co
     WarehousesTableComponent,
     ProductsComponent,
     EditWarehouseComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ProductsTableComponent
   ],
   imports: [
     CommonModule,

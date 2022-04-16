@@ -17,7 +17,11 @@ export class WarehouseService {
     return this.http.get<Warehouse[]>(`${(this.backendURL)}/warehouse`)
   }
 
-  update(id: number, warehouse: WarehouseDTO){
+  findOne(id: string): Observable<Warehouse> {
+    return this.http.get<Warehouse>(`${(this.backendURL)}/warehouse/${id}`)
+  }
+
+  update(id: string, warehouse: WarehouseDTO){
     return this.http.patch<Warehouse>(`${(this.backendURL)}/warehouse/${id}`,warehouse)
   }
 
